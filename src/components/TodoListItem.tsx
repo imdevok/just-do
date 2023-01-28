@@ -19,11 +19,11 @@ const TodoListItem: Component<TodoListItemProps> = (props) => {
 				<input
 					type='checkbox'
 					checked={todo.completed}
-					onChange={() => onChange(todo.id)}
+					onChange={[onChange, todo.id]}
 				/>
 				{todo.task}
 			</label>
-			<button onClick={() => onRemove(todo.id)}>X</button>
+			<button onClick={[onRemove, todo.id]}>X</button>
 		</li>
 	)
 }
