@@ -12,15 +12,16 @@ interface TodoListProps {
 function TodoList(props: TodoListProps) {
     let todoId = 0
 	const { todos, setTodos } = props
-	const addTodo = (task: string) =>
+	const addTodo = (task: string) => (
 		setTodos(todos => [...todos, { id: ++todoId, task, completed: false }])
-	const toggleTodo = (id: number) => {
+	)
+	const toggleTodo = (id: number) => (
 		setTodos(
 			todo => todo.id === id,
 			'completed',
 			completed => !completed
 		)
-	}
+	)
 	const removeTodo = (id: number) => {
 		setTodos(todos => [...todos.filter(todo => todo.id !== id)])
 	}
