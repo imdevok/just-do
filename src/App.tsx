@@ -1,9 +1,12 @@
 import { TodoItem } from "./types/types";
 import TodoList from "./components/TodoList";
 import { createLocalStore } from "./store/TodoStore";
+import { Component } from "solid-js";
 
-function App() {
-  const [todos, setTodos] = createLocalStore<TodoItem[]>("todos", [])
+const App: Component = () => {
+  const [todos, setTodos] = createLocalStore<TodoItem[]>("todos", {
+    data: []
+  })
 
   return (
     <>

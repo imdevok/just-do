@@ -1,4 +1,4 @@
-import { For } from 'solid-js'
+import { Component, For } from 'solid-js'
 import { SetStoreFunction } from 'solid-js/store'
 import { TodoItem } from '../types/types'
 import TodoInput from './TodoInput'
@@ -9,7 +9,7 @@ interface TodoListProps {
 	setTodos: SetStoreFunction<TodoItem[]>
 }
 
-function TodoList(props: TodoListProps) {
+const TodoList: Component<TodoListProps> = (props) => {
     let todoId = 0
 	const { todos, setTodos } = props
 	const addTodo = (task: string) => (

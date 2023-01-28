@@ -1,8 +1,10 @@
+import { Component } from "solid-js"
+
 interface TodoInputProps {
     addTodo: any
 }
 
-function TodoInput(props: TodoInputProps) {
+const TodoInput: Component<TodoInputProps> = (props) => {
     let task: HTMLInputElement
     const { addTodo } = props
     return (

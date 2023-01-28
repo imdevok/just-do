@@ -1,3 +1,4 @@
+import { Component } from 'solid-js'
 import { TodoItem } from '../types/types'
 
 interface TodoListItemProps {
@@ -6,7 +7,7 @@ interface TodoListItemProps {
 	onChange: any
 }
 
-function TodoListItem(props: TodoListItemProps) {
+const TodoListItem: Component<TodoListItemProps> = (props) => {
 	const { todo, onChange, onRemove } = props
 	return (
 		<li
