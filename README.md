@@ -1,1 +1,1 @@
-## Just Do - Simple task manager. Improve your productivity.
+## Just Do - Simple todo app.
