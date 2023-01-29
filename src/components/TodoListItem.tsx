@@ -3,12 +3,12 @@ import { TodoItem } from '../types/types'
 
 interface TodoListItemProps {
 	todo: TodoItem
-	onRemove: any
-	onChange: any
+	onRemove?: (id: string) => void
+	onToggle?: (id: string) => void
 }
 
-const TodoListItem: Component<TodoListItemProps> = (props) => {
-	const { todo, onChange, onRemove } = props
+const TodoListItem: Component<TodoListItemProps> = props => {
+	const { todo, onToggle, onRemove } = props
 	return (
 		<li
 			style={{
@@ -19,7 +19,7 @@ const TodoListItem: Component<TodoListItemProps> = (props) => {
 				<input
 					type='checkbox'
 					checked={todo.completed}
-					onChange={[onChange, todo.id]}
+					onChange={[onToggle, todo.id]}
 				/>
 				{todo.task}
 			</label>

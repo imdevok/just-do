@@ -1,5 +1,5 @@
 export interface TodoItem {
-    id: number
+    id: string
     task: string
     completed: boolean
 }
