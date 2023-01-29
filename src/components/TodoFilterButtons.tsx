@@ -16,7 +16,7 @@ const TodoFilterButton: Component<{
 	)
 }
 
-function TodoFilterButtons(props) {
+function TodoFilterButtons() {
 	return (
 		<>
 		    <TodoFilterButton filter='all'>All</TodoFilterButton>
