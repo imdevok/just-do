@@ -1,10 +1,10 @@
 import { v4 } from 'uuid'
 import { createStore, Store, SetStoreFunction } from 'solid-js/store'
 import { createEffect, createMemo } from 'solid-js'
-import { TodoFilter, TodoItem } from '../types/types'
+import { TodoFilter, ITodo } from '../types/todo'
 
 interface TodoStore {
-	todos: TodoItem[]
+	todos: ITodo[]
 	filter: TodoFilter
 }
 

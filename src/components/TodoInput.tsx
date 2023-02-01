@@ -1,7 +1,9 @@
 import { Component, createSignal } from 'solid-js'
 import { addTodo } from '../store/TodoStore'
+import Button from './UI/Button/Button'
+import Input from './UI/Input/Input'
 
-const TodoInput: Component = props => {
+const TodoInput: Component = () => {
 	const [task, setTask] = createSignal('')
 	const onInput = e => setTask(e.currentTarget.value)
 	const onClick = e => {
@@ -11,8 +13,8 @@ const TodoInput: Component = props => {
 	}
 	return (
 		<form>
-			<input type='text' value={task()} onInput={onInput} />
-			<button onClick={onClick}>Add</button>
+			<Input type='text' value={task()} onInput={onInput} />
+			<Button onClick={onClick}>Add</Button>
 		</form>
 	)
 }

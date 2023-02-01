@@ -1,6 +1,6 @@
 import { Component } from 'solid-js'
 import { filter, setFilter } from '../store/TodoStore'
-import { TodoFilter } from '../types/types'
+import { TodoFilter } from '../types/todo'
 
 const TodoFilterButton: Component<{
 	filter: TodoFilter

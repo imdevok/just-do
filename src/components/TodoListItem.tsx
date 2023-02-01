@@ -1,8 +1,8 @@
 import { Component } from 'solid-js'
-import { TodoItem } from '../types/types'
+import { ITodo } from '../types/todo'
 
 interface TodoListItemProps {
-	todo: TodoItem
+	todo: ITodo
 	onRemove?: (id: string) => void
 	onToggle?: (id: string) => void
 }
