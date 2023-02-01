@@ -25,7 +25,7 @@ const [store, setStore] = createLocalStore<TodoStore>('todos', {
 	filter: 'all',
 })
 
-export const setTodos = (todos: TodoItem[]) => setStore('todos', todos)
+export const setTodos = (todos: ITodo[]) => setStore('todos', todos)
 
 export const setFilter = (filter: TodoFilter) => setStore('filter', filter)
 
@@ -52,9 +52,9 @@ export const completedTodosCount = createMemo(
 )
 
 const filterPredicates = {
-	all: (todo: TodoItem) => true,
-	active: (todo: TodoItem) => !todo.completed,
-	completed: (todo: TodoItem) => todo.completed,
+	all: (todo: ITodo) => true,
+	active: (todo: ITodo) => !todo.completed,
+	completed: (todo: ITodo) => todo.completed,
 }
 
 export const todos = createMemo(() => {
